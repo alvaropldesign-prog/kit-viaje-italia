@@ -829,6 +829,77 @@
 
   /* COPY TOAST */
   .toast {
+
+  /* MAPS */
+  .map-block {
+    margin-bottom: 28px;
+  }
+  .map-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .map-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--sand);
+  }
+  .map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    height: 300px;
+    position: relative;
+    background: var(--sand);
+  }
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .map-stops {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .map-stop {
+    background: white;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .map-stop-num {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .stop-florence .map-stop-num { background: var(--terracotta); }
+  .stop-bologna .map-stop-num  { background: var(--navy); }
+
+  /* COPY TOAST */
+  .toast {
     position: fixed;
     bottom: 24px;
     left: 50%;
@@ -1213,9 +1284,48 @@
       <div class="highlight-box">⚠️ Leyenda: Si subes la Torre degli Asinelli antes de graduarte en la universidad, nunca terminarás la carrera. Pero como vais de vacaciones, ¡no hay problema!</div>
     </div>
 
-    <div class="curiosity-card olive">
-      <div class="curiosity-title">🤫 El susurro de Piazza Maggiore</div>
-      <p>En la Piazza Maggiore, bajo el arco de la torre del Podestà, si hablas susurrando hacia una esquina, alguien en la esquina opuesta te oirá perfectamente. Era el confesionario para leprosos en la Edad Media.</p>
+    <div class="curiosity-card olive" style="border-left-color:#C8973C; background:#FFFBF0;">
+      <div class="curiosity-title" style="color:#7A4F10;">🔐 Los 7 Secretos de Bolonia</div>
+      <p style="font-size:0.82rem;color:#7A6A56;margin-bottom:14px;">Bolonia esconde siete curiosidades repartidas por su centro histórico. Hay que saber buscarlas — la mayoría pasan desapercibidas incluso para los locales.</p>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #C4593A;">
+          <div style="font-size:0.78rem;font-weight:700;color:#C4593A;margin-bottom:4px;">① La Fuente de Neptuno · Piazza del Nettuno</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">La Iglesia obligó al escultor Giambologna a reducir la virilidad de Neptuno. Él obedeció… pero se vengó: hay una baldosa distinta frente a la Salaborsa desde donde el pulgar de Neptuno crea un ilusión óptica muy explícita. Búscala en el suelo.</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #1E2B45;">
+          <div style="font-size:0.78rem;font-weight:700;color:#1E2B45;margin-bottom:4px;">② El Arco de los Susurros · Palazzo del Podestà</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">Bajo los pórticos del Palazzo del Podestà hay un arco con una bóveda especial. Si dos personas se colocan en las esquinas opuestas y susurran a la pared, se escuchan perfectamente entre sí. Era el confesionario para leprosos medievales — los curas confesaban sin acercarse.</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #6B7A45;">
+          <div style="font-size:0.78rem;font-weight:700;color:#6B7A45;margin-bottom:4px;">③ El Meridiano de la Basílica · San Petronio</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">Dentro de la Basílica de San Petronio hay un agujero en el techo por el que entra un rayo de sol que cae sobre el meridiano del suelo: el más largo del mundo (66 metros). Solo ocurre al mediodía solar. Diseñado en 1655 por el astrónomo Cassini para calcular el calendario.</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #9B3D20;">
+          <div style="font-size:0.78rem;font-weight:700;color:#9B3D20;margin-bottom:4px;">④ La Finestrella · Via Piella, 18</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">Una pequeña ventana en una callejuela da al único canal que sobrevive de la antigua "Piccola Venezia". Bolonia tuvo canales como Venecia, usados para el comercio y para mover los molinos. En el siglo XX los cubrieron todos… menos uno. Hay cola de turistas por las mañanas.</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #C8973C;">
+          <div style="font-size:0.78rem;font-weight:700;color:#C8973C;margin-bottom:4px;">⑤ La Inscripción del Cannabis · Via Indipendenza</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">En el techo de los pórticos cerca de la Casa Stagni hay una inscripción latina: <em>"Panis vita, canabis protectio, vinum laetitia"</em> — "El pan es vida, el cannabis es protección, el vino es alegría." El cáñamo fue un cultivo esencial para la economía medieval de la ciudad.</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #1E2B45;">
+          <div style="font-size:0.78rem;font-weight:700;color:#1E2B45;margin-bottom:4px;">⑥ El Jarrón Roto · Torre degli Asinelli</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">En lo alto de la Torre degli Asinelli (498 escalones) hay escondido un jarrón roto que simboliza la capacidad de Bolonia para resolver conflictos. Nadie sabe exactamente dónde está. ¿Lo encontraréis vosotros? Recordatorio: no subir si eres estudiante universitario, ¡trae mala suerte!</p>
+        </div>
+
+        <div style="background:white;border-radius:10px;padding:12px 14px;border-left:3px solid #6B7A45;">
+          <div style="font-size:0.78rem;font-weight:700;color:#6B7A45;margin-bottom:4px;">⑦ Las Tres Flechas · Corte Isolani, Strada Maggiore</div>
+          <p style="font-size:0.82rem;color:#2D2418;line-height:1.6;margin:0;">En el techo de madera del pórtico de la Corte Isolani hay tres flechas clavadas. Leyenda: tres bandidos querían matar a un hacendado, pero una mujer desnuda apareció en una ventana y se distrajeron tanto que las flechas acabaron en las vigas. Llevan ahí siglos. Son difíciles de ver — hay que mirar mucho.</p>
+        </div>
+
+      </div>
     </div>
 
     <div class="curiosity-card" style="border-left-color: var(--terracotta);">
@@ -1284,18 +1394,53 @@
 
       <!-- PARTE 3: BOLONIA -->
       <div class="mission-zone">
-        <div class="mission-zone-title">🍝 Parte 3 · Bolonia — La Ciudad de los Secretos</div>
+        <div class="mission-zone-title">🔴 Parte 3 · Bolonia — Los 7 Secretos (Días 3 y 4)</div>
 
         <div class="mission-card">
-          <div class="mission-card-title">🧱 Misión 4: El Teléfono Invisible <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 3)</span></div>
-          <p><strong style="color:#FDE68A">El Reto:</strong> En la Piazza Maggiore, busca el arco grande del Palazzo del Podestà.</p>
-          <div class="mission-secret">Dile a papá o mamá que se pongan en una esquina del arco y tú en la esquina contraria, de espaldas. Susurra: "Sofía es la mejor agente"… ¡Te oirán perfectamente a través de la piedra!</div>
-          <div class="mission-points">⭐ 30 puntos — la misión más difícil</div>
+          <div class="mission-card-title">🗿 Misión 4: El Truco de Neptuno <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 3 o 4)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> En la Piazza del Nettuno, busca en el suelo una baldosa de color diferente al resto. Ponte encima y mira la estatua de Neptuno.</p>
+          <div class="mission-secret">El escultor ocultó una ilusión óptica de venganza contra la Iglesia que le censuró. Desde esa baldosa, el pulgar del dios parece otra cosa… ¡pregúntale a papá o mamá qué es!</div>
+          <div class="mission-points">⭐ 20 puntos</div>
         </div>
 
         <div class="mission-card">
-          <div class="mission-card-title">🍦 Misión 5: La Maestra Heladera <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 4)</span></div>
-          <p><strong style="color:#FDE68A">Tu Deber:</strong> Probar un sabor que nunca hayas visto en España y darle una nota del 1 al 10.</p>
+          <div class="mission-card-title">🧱 Misión 5: El Teléfono de Piedra <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 3)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> En el Palazzo del Podestà (Piazza Maggiore), busca el arco con las estatuas de San Doménico y San Petronio.</p>
+          <div class="mission-secret">Poneos en esquinas opuestas y susurrad a la pared. ¡Os oiréis perfectamente! Así confesaban a los leprosos sin contagiarse. Susurra: "Sofía es la mejor agente".</div>
+          <div class="mission-points">⭐ 30 puntos — la misión más épica</div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-title">☀️ Misión 6: El Rayo de Sol de San Petronio <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 3 o 4 · al mediodía)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> Entra en la Basílica de San Petronio al mediodía y busca en el suelo una línea larga dorada.</p>
+          <div class="mission-secret">Es el meridiano más grande del mundo (66 metros). Un agujero en el techo deja entrar un rayo de sol exacto al mediodía solar que cae sobre esa línea. ¡Es como un reloj gigante hecho de sol!</div>
+          <div class="mission-points">⭐ 25 puntos</div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-title">🪟 Misión 7: La Ventana Secreta de Venecia <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 4 · Via Piella 18)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> Busca en la pequeña calle Via Piella una ventanita pequeña en la pared. Ábrela.</p>
+          <div class="mission-secret">Verás un canal de agua escondido — Bolonia tenía canales como Venecia. Los taparon casi todos en el siglo XX. Este es el único que sobrevivió. Se llama la Finestrella.</div>
+          <div class="mission-points">⭐ 20 puntos</div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-title">🏹 Misión 8: Las Flechas Perdidas <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 4 · Corte Isolani, Strada Maggiore)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> Busca el pasaje Corte Isolani y mira hacia arriba al techo de madera. ¿Cuántas flechas ves clavadas?</p>
+          <div class="mission-secret">Son 3 flechas que llevan siglos ahí. Tres bandidos querían matar a alguien pero se distrajeron porque una mujer desnuda apareció en la ventana… y las flechas acabaron en las vigas. ¡Son muy difíciles de encontrar!</div>
+          <div class="mission-points">⭐ 25 puntos · extra si encuentras las 3</div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-title">🗼 Misión 9: El Jarrón Imposible <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 4 · Torre degli Asinelli)</span></div>
+          <p><strong style="color:#FDE68A">El Reto:</strong> Sube los 498 escalones de la Torre degli Asinelli. Arriba, busca un jarrón roto escondido.</p>
+          <div class="mission-secret">Nadie sabe exactamente dónde está. Simboliza que Bolonia siempre resuelve sus conflictos. ¡Si lo encuentras, eres la mejor agente del mundo!</div>
+          <div class="mission-points">⭐ 35 puntos si llegas arriba · +20 si encuentras el jarrón</div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-title">🍦 Misión 10: La Maestra Heladera <span style="font-size:0.7rem;color:rgba(253,230,138,0.6)">(Día 4)</span></div>
+          <p><strong style="color:#FDE68A">Tu Deber:</strong> Probar un sabor de gelato que nunca hayas visto en España y darle nota del 1 al 10.</p>
           <input class="mission-gelato-input" type="text" placeholder="✏️ Escribe aquí el sabor probado y tu nota…" oninput="saveGelato(this)">
           <div class="mission-points">⭐ 20 puntos</div>
         </div>
@@ -1706,7 +1851,7 @@
     <div class="sofia-score-box">
       <div class="sofia-score-label">Puntos conseguidos</div>
       <div class="sofia-score-num" id="scoreNum">0</div>
-      <div class="sofia-score-max">de 180 puntos posibles</div>
+      <div class="sofia-score-max">de 340 puntos posibles</div>
       <div class="sofia-progress">
         <div class="sofia-progress-bar" id="scoreBar" style="width:0%"></div>
       </div>
@@ -1752,7 +1897,7 @@ function updateScore() {
     if (item.classList.contains('done')) total += pts;
   });
   document.getElementById('scoreNum').textContent = total;
-  document.getElementById('scoreBar').style.width = (total / 180 * 100) + '%';
+  document.getElementById('scoreBar').style.width = (total / 340 * 100) + '%';
   // Unlock rewards
   const r1 = document.getElementById('reward1');
   const r2 = document.getElementById('reward2');
